@@ -24,7 +24,6 @@ public class Parser {
     for (int i = 0; i < content.length(); i += 1) {
       fos.write(content.charAt(i));
     }
-    fos.close();
   }
   private String getData(boolean parseUnicode) throws IOException {
     FileInputStream fis = new FileInputStream(file);
@@ -35,7 +34,6 @@ public class Parser {
         output += (char) data;
       }
     }
-    fis.close();
     return output;
   }
 }
